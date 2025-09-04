@@ -18,5 +18,3 @@ python3 -m http.server 8000
 This static website is optimized for GitHub Pages. Simply push to the main branch to deploy.
 
 ---
-
-Visit us at [revanarc.org](https://revanarc.org)
