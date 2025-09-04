@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevanArc - Two Sides. One Purpose.</title>
+    <meta name="description" content="RevanArc - Two Sides. One Purpose. A unified security stack—knowledge, architecture, provenance, and protection for AI.">
+    <meta name="keywords" content="AI Security, Security Stack, AI Safety, Security Research, RevanArc">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+                    <div class="nav-logo">
+            <div class="revan-logo">
+                <div class="logo-mask">
+                    <img src="revanarc.png" alt="RevanArc Logo" class="emblem-logo">
+                </div>
+                <span class="logo-text">REVANARC</span>
+            </div>
+        </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#knowledge" class="nav-link">Knowledge</a>
+                <a href="#community" class="nav-link">Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="starfield"></div>
+        <div class="hero-content">
+            <div class="hero-emblem">
+                <div class="revan-emblem">
+                    <div class="emblem-mask">
+                        <img src="revanarc.png" alt="RevanArc Logo" class="emblem-logo">
+                    </div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-main">RevanArc</span>
+                <span class="title-subtitle">Two Sides. One Purpose.</span>
+            </h1>
+            <p class="hero-description">
+                A unified security stack—knowledge, architecture, provenance, and protection for AI.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button primary">Explore Projects</a>
+                <a href="#community" class="cta-button secondary">Join Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Duality of Security</h2>
+                <div class="art-deco-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Like the legendary Revan who mastered both the light and dark sides of the Force, RevanArc embodies the dual nature of AI security. We unite offensive and defensive capabilities, bringing together red team adversarial techniques with blue team protective measures.</p>
+                    <p>Our mission is to advance the state of AI security through open research, practical tools, and collaborative knowledge sharing across the entire security spectrum.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker blue"></div>
+                        <div class="timeline-content">
+                            <h3>Foundation</h3>
+                            <p>Establishing core AI security research</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker red"></div>
+                        <div class="timeline-content">
+                            <h3>Evolution</h3>
+                            <p>Expanding into adversarial AI techniques</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker gold"></div>
+                        <div class="timeline-content">
+                            <h3>Mastery</h3>
+                            <p>Unifying offensive and defensive capabilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Arsenal</h2>
+                <div class="art-deco-divider"></div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="blue">Blue Team</button>
+                    <button class="filter-btn" data-filter="red">Red Team</button>
+                    <button class="filter-btn" data-filter="supply">Supply Chain</button>
+                    <button class="filter-btn" data-filter="knowledge">Knowledge</button>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <!-- Enchiridion -->
+                <div class="project-card" data-category="knowledge" data-project-id="enchiridion">
+                    <div class="card-frame">
+                        <div class="card-icon knowledge-icon">📚</div>
+                        <h3 class="card-title">Enchiridion</h3>
+                        <p class="card-description">Comprehensive encyclopedia and knowledgebase of AI security research, techniques, and best practices.</p>
+                        <div class="card-tags">
+                            <span class="tag knowledge">Knowledge</span>
+                            <span class="tag neutral">Research</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Phalanx -->
+                <div class="project-card" data-category="blue red" data-project-id="phalanx">
+                    <div class="card-frame">
+                        <div class="card-icon defense-icon">🛡️</div>
+                        <h3 class="card-title">Phalanx</h3>
+                        <p class="card-description">End-to-end AI security platform providing runtime protection, evaluations, and remediation capabilities.</p>
+                        <div class="card-tags">
+                            <span class="tag blue">Defense</span>
+                            <span class="tag red">Testing</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- LMBoM -->
+                                <!-- LMBoM -->
+                <div class="project-card" data-category="supply" data-project-id="lmbom">
+                    <div class="card-frame">
+                        <div class="card-icon supply-icon">📋</div>
+                        <h3 class="card-title">LMBoM</h3>
+                        <p class="card-description">Language Model Bill of Materials - tracking lineage, evaluations, and provenance for AI model supply chains.</p>
+                        <div class="card-tags">
+                            <span class="tag supply">Supply Chain</span>
+                            <span class="tag neutral">Transparency</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- HK-47 -->
+                <div class="project-card" data-category="red" data-project-id="hk47">
+                    <div class="card-frame">
+                        <div class="card-icon red-icon">🤖</div>
+                        <h3 class="card-title">HK-47</h3>
+                        <p class="card-description">Autonomous AI red-teaming agent capable of discovering novel attack vectors against AI systems.</p>
+                        <div class="card-tags">
+                            <span class="tag red">Red Team</span>
+                            <span class="tag neutral">Autonomous</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Starmap -->
+                <div class="project-card" data-category="blue" data-project-id="starmap">
+                    <div class="card-frame">
+                        <div class="card-icon blue-icon">🗺️</div>
+                        <h3 class="card-title">Starmap</h3>
+                        <p class="card-description">AI security reference architectures and implementation guides for robust AI system design.</p>
+                        <div class="card-tags">
+                            <span class="tag blue">Defense</span>
+                            <span class="tag neutral">Architecture</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Veritas -->
+                <div class="project-card" data-category="blue knowledge" data-project-id="veritas">
+                    <div class="card-frame">
+                        <div class="card-icon blue-icon">🔎</div>
+                        <h3 class="card-title">Veritas</h3>
+                        <p class="card-description">Language Model Evaluation Service providing standardized security, safety, and robustness testing for AI models.</p>
+                        <div class="card-tags">
+                            <span class="tag blue">Evaluation</span>
+                            <span class="tag knowledge">Testing</span>
+                        </div>
+                        <a href="#" class="card-button">View Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Section -->
+    <section id="knowledge" class="knowledge">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Secure AI Development Lifecycle</h2>
+                <div class="art-deco-divider"></div>
+            </div>
+            <div class="knowledge-map">
+                <div class="constellation">
+                    <div class="knowledge-node" data-stage="design" data-category="design">
+                        <div class="node-circle blue"></div>
+                        <span class="node-label">Secure Design</span>
+                    </div>
+                    <div class="knowledge-node" data-stage="development" data-category="development">
+                        <div class="node-circle gold"></div>
+                        <span class="node-label">Development</span>
+                    </div>
+                    <div class="knowledge-node" data-stage="deployment" data-category="deployment">
+                        <div class="node-circle red"></div>
+                        <span class="node-label">Deployment</span>
+                    </div>
+                    <div class="knowledge-node" data-stage="operation" data-category="operation">
+                        <div class="node-circle silver"></div>
+                        <span class="node-label">Operation & Maintenance</span>
+                    </div>
+                    <div class="constellation-lines">
+                        <svg class="connection-svg">
+                            <line x1="25%" y1="25%" x2="75%" y2="25%" class="connection-line"></line>
+                            <line x1="25%" y1="75%" x2="75%" y2="75%" class="connection-line"></line>
+                            <line x1="25%" y1="25%" x2="25%" y2="75%" class="connection-line"></line>
+                            <line x1="75%" y1="25%" x2="75%" y2="75%" class="connection-line"></line>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Knowledge Stage Details -->
+                <div class="stage-details" id="stageDetails">
+                    <div class="stage-content" data-stage="design">
+                        <h3>Secure Design</h3>
+                        <p>Establishing security foundations from the ground up, including threat modeling, security requirements, and architectural security patterns for AI systems.</p>
+                        <ul>
+                            <li>AI Security Architecture</li>
+                            <li>Threat Modeling for AI</li>
+                            <li>Privacy by Design</li>
+                            <li>Security Requirements</li>
+                        </ul>
+                    </div>
+                    <div class="stage-content" data-stage="development">
+                        <h3>Secure Development</h3>
+                        <p>Implementing secure coding practices, vulnerability testing, and security controls during the AI model development and training phase.</p>
+                        <ul>
+                            <li>Secure ML Pipelines</li>
+                            <li>Data Security & Privacy</li>
+                            <li>Model Security Testing</li>
+                            <li>Supply Chain Security</li>
+                        </ul>
+                    </div>
+                    <div class="stage-content" data-stage="deployment">
+                        <h3>Secure Deployment</h3>
+                        <p>Ensuring secure deployment practices, runtime protection, and monitoring for AI systems in production environments.</p>
+                        <ul>
+                            <li>Runtime Protection</li>
+                            <li>Secure Configuration</li>
+                            <li>Access Controls</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                    </div>
+                    <div class="stage-content" data-stage="operation">
+                        <h3>Operation & Maintenance</h3>
+                        <p>Ongoing security maintenance, incident response, model updates, and continuous security assessment of deployed AI systems.</p>
+                        <ul>
+                            <li>Continuous Monitoring</li>
+                            <li>Incident Response</li>
+                            <li>Model Maintenance</li>
+                            <li>Security Updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join the Alliance</h2>
+                <div class="art-deco-divider"></div>
+            </div>
+            <div class="community-content">
+                <div class="community-links">
+                    <a href="https://github.com/RevanArc" class="community-card github" target="_blank">
+                        <div class="card-icon">⚡</div>
+                        <h3>GitHub Organization</h3>
+                        <p>Explore our open-source projects and contribute to the codebase</p>
+                    </a>
+                    <a href="#" class="community-card discussions">
+                        <div class="card-icon">💬</div>
+                        <h3>Discussions</h3>
+                        <p>Join conversations about AI security research and best practices</p>
+                    </a>
+                    <a href="#" class="community-card discord">
+                        <div class="card-icon">🗲</div>
+                        <h3>Discord</h3>
+                        <p>Real-time collaboration and community support</p>
+                    </a>
+                </div>
+                <div class="contribution-guidelines">
+                    <h3>Contribution Guidelines</h3>
+                    <ul>
+                        <li>Follow our code of conduct and ethical guidelines</li>
+                        <li>Contribute to both offensive and defensive security research</li>
+                        <li>Share knowledge and learn from the community</li>
+                        <li>Maintain the balance between red and blue team perspectives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="revan-logo small">
+                        <div class="logo-mask">
+                            <img src="revanarc.png" alt="RevanArc Logo" class="emblem-logo">
+                        </div>
+                        <span class="logo-text">RevanArc</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="social-constellation">
+                        <a href="https://github.com/RevanArc" class="social-star github" target="_blank">★</a>
+                        <a href="#" class="social-star twitter">★</a>
+                        <a href="#" class="social-star discord">★</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="art-deco-frame"></div>
+                <p>&copy; 2025 RevanArc. Two Sides. One Purpose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

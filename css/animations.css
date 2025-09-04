@@ -1,0 +1,530 @@
+/* ===== ANIMATIONS & EFFECTS ===== */
+
+/* ===== GLOBAL ANIMATIONS ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 25px currentColor, 0 0 35px currentColor;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ===== STARFIELD ANIMATION ===== */
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background-image: 
+    radial-gradient(3px 3px at 100px 50px, var(--brass-gold), transparent),
+    radial-gradient(2px 2px at 200px 100px, var(--electric-blue), transparent),
+    radial-gradient(1px 1px at 300px 150px, var(--crimson-red), transparent),
+    radial-gradient(2px 2px at 400px 80px, var(--silver), transparent);
+  background-size: 400px 200px;
+  animation: starDrift 150s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes starDrift {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-100px) translateY(-20px); }
+  50% { transform: translateX(-200px) translateY(10px); }
+  75% { transform: translateX(-300px) translateY(-10px); }
+  100% { transform: translateX(-400px) translateY(0); }
+}
+
+/* ===== LOGO ANIMATIONS ===== */
+
+.mask-left,
+.mask-right {
+  transition: var(--transition-medium);
+}
+
+/* ===== EMBLEM ANIMATIONS ===== */
+
+@keyframes emblemFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+.emblem-left,
+.emblem-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.emblem-left::before,
+.emblem-right::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shine 4s ease-in-out infinite;
+  transform: rotate(45deg);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ===== DUALITY SWITCH ANIMATION ===== */
+
+.duality-switch {
+  background: linear-gradient(45deg, var(--electric-blue), var(--crimson-red));
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.switch-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.switch-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: sliderShine 3s ease-in-out infinite;
+}
+
+@keyframes sliderShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ===== BUTTON ANIMATIONS ===== */
+
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: var(--transition-medium);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button.primary {
+  background-size: 200% 200%;
+  animation: buttonGradient 3s ease-in-out infinite;
+}
+
+@keyframes buttonGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== CARD ANIMATIONS ===== */
+
+.project-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+
+.card-frame {
+  position: relative;
+}
+
+.card-frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(212, 175, 55, 0.05),
+    transparent
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: var(--transition-medium);
+  pointer-events: none;
+}
+
+.project-card:hover .card-frame::after {
+  opacity: 1;
+  animation: cardShimmer 2s ease-in-out infinite;
+}
+
+@keyframes cardShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.card-icon {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.project-card:hover .card-icon {
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-2px);
+  }
+}
+
+/* ===== KNOWLEDGE CONSTELLATION ANIMATIONS ===== */
+
+.knowledge-node {
+  animation: nodeFloat 4s ease-in-out infinite;
+}
+
+.knowledge-node:nth-child(1) { animation-delay: 0s; }
+.knowledge-node:nth-child(2) { animation-delay: 1s; }
+.knowledge-node:nth-child(3) { animation-delay: 2s; }
+.knowledge-node:nth-child(4) { animation-delay: 3s; }
+
+@keyframes nodeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.node-circle {
+  animation: nodeGlow 3s ease-in-out infinite;
+}
+
+@keyframes nodeGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 25px currentColor, 0 0 35px currentColor;
+  }
+}
+
+.knowledge-node:hover .node-circle {
+  animation: nodePulse 0.5s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ===== TIMELINE ANIMATIONS ===== */
+
+.timeline-item {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+
+.timeline-marker {
+  animation: markerPulse 2s ease-in-out infinite;
+}
+
+@keyframes markerPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px currentColor;
+  }
+}
+
+/* ===== COMMUNITY ANIMATIONS ===== */
+
+.community-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.community-card:nth-child(1) { animation-delay: 0.1s; }
+.community-card:nth-child(2) { animation-delay: 0.2s; }
+.community-card:nth-child(3) { animation-delay: 0.3s; }
+
+.community-card .card-icon {
+  transition: var(--transition-medium);
+}
+
+.community-card:hover .card-icon {
+  animation: iconSpin 1s ease-in-out;
+}
+
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-slow);
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(212, 175, 55, 0.3);
+  border-top: 3px solid var(--brass-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: var(--spacing-md) auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== HOVER EFFECTS ===== */
+
+.hover-glow {
+  transition: var(--transition-fast);
+}
+
+.hover-glow:hover {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.hover-lift {
+  transition: var(--transition-fast);
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+.hover-scale {
+  transition: var(--transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MODE TRANSITIONS ===== */
+
+.blue-mode {
+  --accent-color: var(--electric-blue);
+  --accent-gradient: var(--blue-gradient);
+}
+
+.red-mode {
+  --accent-color: var(--crimson-red);
+  --accent-gradient: var(--red-gradient);
+}
+
+.mode-transition {
+  transition: all var(--transition-slow);
+}
+
+/* Apply mode colors */
+.blue-mode .emblem-left {
+  box-shadow: 0 0 30px rgba(77, 163, 255, 0.6);
+}
+
+.red-mode .emblem-right {
+  box-shadow: 0 0 30px rgba(224, 72, 72, 0.6);
+}
+
+.blue-mode .cta-button.primary {
+  box-shadow: 0 4px 15px rgba(77, 163, 255, 0.3);
+}
+
+.red-mode .cta-button.primary {
+  box-shadow: 0 4px 15px rgba(224, 72, 72, 0.3);
+}
+
+/* ===== RESPONSIVE ANIMATIONS ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .revan-emblem {
+    animation-duration: 4s;
+  }
+  
+  .starfield {
+    animation-duration: 80s;
+  }
+  
+  .project-card:nth-child(n) {
+    animation-delay: 0.1s;
+  }
+}
