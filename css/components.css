@@ -181,6 +181,13 @@
   text-align: center;
 }
 
+.project-icon-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
 .knowledge-icon { color: var(--silver); }
 .defense-icon { color: var(--electric-blue); }
 .supply-icon { color: var(--brass-gold); }

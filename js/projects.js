@@ -23,7 +23,7 @@ class ProjectManager {
                 description: 'Comprehensive encyclopedia and knowledgebase of AI security research, techniques, and best practices.',
                 categories: ['knowledge'],
                 tags: ['Knowledge', 'Research'],
-                icon: '📚',
+                icon: 'img/enchiridion.png',
                 repo: 'https://github.com/RevanArc/enchiridion',
                 status: 'active'
             },
