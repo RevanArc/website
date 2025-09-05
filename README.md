@@ -1,6 +1,6 @@
 # RevanArc Website
 
-The official website for RevanArc - Two Sides. One Purpose.
+The official website for RevanArc - Two Paths. One Purpose.
 
 A unified security stack—knowledge, architecture, provenance, and protection for AI.
 
